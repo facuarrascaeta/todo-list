@@ -18,7 +18,7 @@ body {
     align-items: center;
     margin-bottom: 5px;
     animation-name: mostrar-tarea;
-    animation-duration: 5s;
+    animation-duration: 0.5s;
     font-family: 'Zen Kurenaido', sans-serif;
 }
 
@@ -26,6 +26,30 @@ body {
     /* display: inline-block; */
     list-style: none;
     margin-left: 20px;
+    position: relative;
+    animation-name: tarea;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+    padding-bottom: 6px;
+}
+
+.checktask {
+    opacity: 0;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes tarea {
+    0% {left: -100px; opacity: 0;}
+    100% {left: 0px; opacity: 1;}
+}
+
+@keyframes aparecer {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 .tachado {

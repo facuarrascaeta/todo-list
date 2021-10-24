@@ -41,7 +41,6 @@ export function ListaTareas() {
                         nuevaLista.splice(index, 1)
                         console.log(lista)
                         setLista(nuevaLista);
-                        console.log(lista)
                       }}
                     />
           })}
@@ -60,7 +59,7 @@ export function Tarea(props) {
   return (
     <React.Fragment>
       <div className='wrap-item'>
-        <input type='checkbox' onChange={() => setIsCompleted(!isCompleted)} /><br />
+        <input className="checktask" type='checkbox' onChange={() => setIsCompleted(!isCompleted)} /><br />
         <li className={isCompleted ? 'tarea tachado' : 'tarea'}>{props.contenido}</li>
         <button className={isCompleted ? 'delete' : 'delete hidden' } onClick={() => props.onClick()}><img className='icon' src="http://simpleicon.com/wp-content/uploads/trash.svg"/></button>
       </div>
